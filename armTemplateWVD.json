@@ -57,16 +57,24 @@
         
                     {
                         "type": "PowerShell",
-                        "name": "installPython3.7",
+                        "name": "downloadPython3.7",
                         "runElevated": true,
                         "runAsSystem": true,
-                        "scriptUri": "https://raw.githubusercontent.com/asawalhi/AzureImages/main/installpython3.7.ps1"
+                        "scriptUri": "https://raw.githubusercontent.com/asawalhi/AzureImages/main/downloadpython3.7.ps1"
                     },
+                    {
+                        "type": "PowerShell",
+                        "name": "installPython",
+                        "runElevated": true,
+                        "runAsSystem": true,
+                        "scriptUri": "https://raw.githubusercontent.com/asawalhi/AzureImages/main/install-python.ps1"
+                    }
                     {
                         "type": "WindowsRestart",
                         "restartCheckCommand": "write-host 'restarting post Optimizations'",
                         "restartTimeout": "3m"
                     },
+                    
                     {
                         "type": "PowerShell",
                         "name": "installPandas",
