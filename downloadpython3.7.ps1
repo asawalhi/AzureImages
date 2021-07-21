@@ -1,4 +1,4 @@
-powershell
+
 cd \
 mkdir py
 cd py
