@@ -55,7 +55,7 @@
             "customize": [
                     {
                         "type": "PowerShell",
-                        "name": "downloadPython3.7",
+                        "name": "downloadandinstallPython3.7",
                         "runElevated": true,
                         "runAsSystem": true,
                         "scriptUri": "https://raw.githubusercontent.com/asawalhi/AzureImages/main/downloadpython3.7.ps1"
