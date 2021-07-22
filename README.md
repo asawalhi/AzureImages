@@ -1,3 +1,5 @@
+https://github.com/Azure/azvmimagebuilder/tree/main/solutions/14_Building_Images_WVD
+
 # Using PowerShell to Create a Windows Virtual Desktop Custom Image using Azure VM Image Builder
 
 This article is to show you how you can create a basic WVD customized image with these customizations:
