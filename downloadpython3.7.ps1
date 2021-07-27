@@ -7,3 +7,5 @@ Start-Process "C:\py\python-3.7.0.exe" -argumentlist "/quiet InstallAllUsers=1 P
 
 $env:Path = [System.Environment]::GetEnvironmentVariable("Path","Machine") + ";" + [System.Environment]::GetEnvironmentVariable("Path","User") 
 invoke-expression 'cmd /c start powershell -command {pip install pandas==0.25}' 
+
+pip list
