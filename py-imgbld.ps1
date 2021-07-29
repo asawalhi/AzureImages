@@ -10,7 +10,7 @@ $env:Path = [System.Environment]::GetEnvironmentVariable("Path","Machine") + ";"
 
 #upgrade pip
 cd c:\buildArtifacts\ImageBuilder\
-invoke-expression 'cmd /c start powershell -command {python -m pip install --upgrade pip}' 
+python -m pip install --upgrade pip
 
 $env:Path = [System.Environment]::GetEnvironmentVariable("Path","Machine") + ";" + [System.Environment]::GetEnvironmentVariable("Path","User") 
 
