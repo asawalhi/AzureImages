@@ -12,6 +12,9 @@ $env:Path = [System.Environment]::GetEnvironmentVariable("Path","Machine") + ";"
 cd c:\buildArtifacts\ImageBuilder\
 invoke-expression 'cmd /c start powershell -command {python -m pip install --upgrade pip}' 
 
+$env:Path = [System.Environment]::GetEnvironmentVariable("Path","Machine") + ";" + [System.Environment]::GetEnvironmentVariable("Path","User") 
+
+
 #Install all reqs
 pip install wheel==0.36.2
 pip install -r C:\reqs.txt
