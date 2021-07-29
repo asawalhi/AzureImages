@@ -16,6 +16,5 @@ $env:Path = [System.Environment]::GetEnvironmentVariable("Path","Machine") + ";"
 
 
 #Install all reqs
-pip install wheel==0.36.2
 pip install -r C:\reqs.txt
 pip list
