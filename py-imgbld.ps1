@@ -13,5 +13,5 @@ cd c:\buildArtifacts\ImageBuilder\
 invoke-expression 'cmd /c start powershell -command {python -m pip install --upgrade pip}' 
 
 #Install all reqs
-pip install -r reqs.txt
+pip install -r \reqs.txt
 pip list
