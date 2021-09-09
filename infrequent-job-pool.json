@@ -1,0 +1,44 @@
+{
+    "id": "infrequent-job-pool",
+    "url": "https://opsbatch.eastus.batch.azure.com/pools/infrequent-job-pool",
+    "eTag": "0x8D9735179164335",
+    "lastModified": "2021-09-09T05:20:01.068Z",
+    "creationTime": "2021-09-07T15:25:01.008Z",
+    "state": "active",
+    "stateTransitionTime": "2021-09-07T15:25:01.008Z",
+    "allocationState": "steady",
+    "allocationStateTransitionTime": "2021-09-09T05:23:27.335Z",
+    "vmSize": "standard_d2s_v3",
+    "virtualMachineConfiguration": {
+        "imageReference": {
+            "virtualMachineImageId": "/subscriptions/60bb0c73-7d7e-4fa6-8845-9fe54279521a/resourceGroups/ImageBuilderRG00/providers/Microsoft.Compute/galleries/BatchSharedImageGallery/images/WindowsServer2019-DataCenter-Core/versions/0.24882.24479"
+        },
+        "nodeAgentSKUId": "batch.node.windows amd64",
+        "nodePlacementConfiguration": {
+            "policy": "Regional"
+        }
+    },
+    "resizeTimeout": "PT15M",
+    "currentDedicatedNodes": 0,
+    "currentLowPriorityNodes": 0,
+    "targetDedicatedNodes": 0,
+    "targetLowPriorityNodes": 0,
+    "enableAutoScale": true,
+    "autoScaleFormula": "startingNumberOfVMs = 0;\nmaxNumberofVMs = 8;\npendingTaskSamplePercent = $PendingTasks.GetSamplePercent(180 * TimeInterval_Second);\npendingTaskSamples = pendingTaskSamplePercent < 70 ? startingNumberOfVMs : avg($PendingTasks.GetSample(180 * TimeInterval_Second));\n$TargetDedicatedNodes=min(maxNumberofVMs, pendingTaskSamples);\n$NodeDeallocationOption = taskcompletion;",
+    "autoScaleEvaluationInterval": "PT5M",
+    "autoScaleRun": {
+        "timestamp": "2021-09-09T06:55:01.053Z",
+        "results": "$TargetDedicatedNodes=0;$TargetLowPriorityNodes=0;$NodeDeallocationOption=taskcompletion;maxNumberofVMs=8;pendingTaskSamplePercent=100;pendingTaskSamples=0;startingNumberOfVMs=0"
+    },
+    "enableInterNodeCommunication": false,
+    "networkConfiguration": {
+        "dynamicVNetAssignmentScope": "none",
+        "publicIPAddressConfiguration": {
+            "provision": "BatchManaged"
+        }
+    },
+    "taskSlotsPerNode": 1,
+    "taskSchedulingPolicy": {
+        "nodeFillType": "Pack"
+    }
+}
