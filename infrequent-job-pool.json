@@ -21,7 +21,7 @@
     "currentDedicatedNodes": 0,
     "currentLowPriorityNodes": 0,
     "enableAutoScale": true,
-    "autoScaleFormula": "startingNumberOfVMs = 0;\nmaxNumberofVMs = 8;\npendingTaskSamplePercent = $PendingTasks.GetSamplePercent(180 * TimeInterval_Second);\npendingTaskSamples = pendingTaskSamplePercent < 70 ? startingNumberOfVMs : avg($PendingTasks.GetSample(180 * TimeInterval_Second));\n$TargetDedicatedNodes=min(maxNumberofVMs, pendingTaskSamples);\n$NodeDeallocationOption = taskcompletion;",
+    "autoScaleFormula": "startingNumberOfVMs = 0;\nmaxNumberofVMs = 10;\npendingTaskSamplePercent = $PendingTasks.GetSamplePercent(180 * TimeInterval_Second);\npendingTaskSamples = pendingTaskSamplePercent < 70 ? startingNumberOfVMs : avg($PendingTasks.GetSample(180 * TimeInterval_Second));\n$TargetDedicatedNodes=min(maxNumberofVMs, pendingTaskSamples);\n$NodeDeallocationOption = taskcompletion;",
     "autoScaleEvaluationInterval": "PT5M",
     "autoScaleRun": {
         "timestamp": "2021-09-09T06:55:01.053Z",
