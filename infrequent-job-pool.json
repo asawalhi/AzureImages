@@ -11,7 +11,7 @@
     "vmSize": "standard_d2s_v3",
     "virtualMachineConfiguration": {
         "imageReference": {
-            "virtualMachineImageId": "/subscriptions/60bb0c73-7d7e-4fa6-8845-9fe54279521a/resourceGroups/ImageBuilderRG00/providers/Microsoft.Compute/galleries/BatchSharedImageGallery/images/WindowsServer2019-DataCenter-Core/versions/0.24882.24479"
+            "virtualMachineImageId": "<virtualMachineImageId>"
         },
         "nodeAgentSKUId": "batch.node.windows amd64",
         "nodePlacementConfiguration": {
