@@ -60,6 +60,7 @@
                         "runAsSystem": true,
                         "scriptUri": "https://raw.githubusercontent.com/asawalhi/AzureImages/main/tls-to-1.2.ps1"
                     }
+                ]
             "distribute": 
             [
                 {   
