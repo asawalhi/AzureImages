@@ -52,6 +52,14 @@
                     "sku": "2016-Datacenter-Server-Core-smalldisk",
                     "version": "latest"
             },
+            "customize": [
+                    {
+                        "type": "PowerShell",
+                        "name": "Change TLS to 1.2",
+                        "runElevated": true,
+                        "runAsSystem": true,
+                        "scriptUri": "https://raw.githubusercontent.com/asawalhi/AzureImages/main/tls-to-1.2.ps1"
+                    }
             "distribute": 
             [
                 {   
